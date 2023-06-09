@@ -1,0 +1,440 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+html {
+    box-sizing: border-box; /*Mantendra el modelo de caja*/
+}
+
+/* Elemento root para crear variables */
+:root {
+    --primer-color: #14ffec;
+    --segundo-color: #0d7377;
+    --tercer-color: #323232;
+    --cuarto-color: #212121;
+    --quinto-color: #007bff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+h6 {
+    font-family: 'Cinzel Decorative', cursive;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+ul, li, a, form, button{
+    font-family: 'Cinzel Decorative', cursive;
+}
+
+p {
+    font-family: 'Cinzel Decorative', cursive;
+    color: #000000;
+    font-weight: 600;
+}
+
+
+body {
+    background: var(--segundo-color);
+}
+
+header {
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background: var(--segundo-color);
+    margin: 0 auto;
+    text-align: center;
+}
+
+main {
+    display: flex;
+    /* height: 100vh; */
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    /* margin-top: -60px; */
+}
+
+.container {
+    max-width: 700px;
+    width: 100%;
+    background: #ffffff;
+    padding: 25px 30px;
+    border-radius: 5px;
+}
+
+.container .title {
+    font-size: 30px;
+    font-weight: 700;
+    position: relative;
+    text-align: center;
+}
+
+.container p {
+    text-align: center;
+    margin-top: 45px;
+    color: var(--tercer-color);
+}
+
+.container form .user-details {
+    display: flex;
+    flex-wrap: wrap; /*Esta funcion hace que los label y los input se vean uno al lado del otro*/
+    justify-content: space-between;
+    margin: 20px 0 12px 0;
+    margin-top: 30px;
+}
+
+form .user-details .input-box {
+    margin-bottom: 15px;
+    width: calc(100% / 2 - 20px); /*Alineamos los campos, label y input*/
+}
+
+.input-box{
+    font-family: 'Cinzel Decorative', cursive !important;
+    color: #000000;
+    font-weight: 600;
+}
+
+.user-details .input-box .details {
+    display: block;
+    font-weight: 700;
+    margin-bottom: 5px;
+    font-family: 'Cinzel Decorative', cursive;
+}
+
+.user-details .input-box input {
+    height: 45px;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding-left: 15px;
+    font-size: 16px;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+}
+
+.user-details .input-box select {
+    height: 45px;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding-left: 15px;
+    font-size: 16px;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+}
+
+.user-details .input-box input:focus,
+.user-details .input-box select:focus,
+.user-details .input-box option:focus,
+.user-details .input-box input:valid {
+    border-color: var(--segundo-color);
+}
+
+form .button input {
+    width: 100%;
+    margin-top: 40px;
+    height: 50px;
+    background: var(--segundo-color);
+    color: #ffffff;
+    margin-bottom: 10px;
+    font-size: 18px;
+    border: transparent;
+    font-weight: 700;
+    font-family: 'Cinzel Decorative', cursive;
+    border-radius: 4px;
+}
+
+form .button input:hover {
+    background: var(--quinto-color);
+    border: var(--quinto-color);
+}
+
+form .login p{
+    font-family: 'Cinzel Decorative', cursive;
+}
+
+form .login a{
+    text-decoration: none;
+    font-family: 'Cinzel Decorative', cursive;
+    font-weight: 700;
+    color: var(--segundo-color);
+}
+
+form .login a:hover{
+    color: var(--quinto-color) !important;
+}
+
+form .login a:hover {
+    color: #000;
+}
+
+
+#logo img {
+    width: 280px;
+    height: 120px;
+    padding: 0;
+    align-items: center;
+    margin: 0 auto;
+}
+
+/* Estilos Phone */
+@media screen and (min-width: 280px) and (max-width: 319px){
+    header{
+        display: block;
+        width: 100%;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+    }
+    #logo{
+        width: 100%;
+        display: block;
+        position: relative;
+        margin: 0 auto !important;
+        text-align: center;
+    }
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    main{
+        width: 98%;
+        margin: 0 auto;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+    }
+    header #logo img{
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .container{
+        width: 85%;
+        max-width: 1000px;
+        margin: 0 auto;
+        display: block;
+    }
+    .user-details span.details {
+        font-size: 9px;
+    }
+
+    .user-details .input-box input{
+        font-size: 9px;
+    }
+
+    .user-details .input-box select{
+        font-size: 9px;
+    }
+
+    #myContainer form .user-details{
+        display: block !important;
+        position: relative;
+        margin: 0 auto;
+        flex-wrap: nowrap;
+        width: 100% !important;
+    }
+    .user-details .input-box input{
+        width: 100%;
+    }
+}
+@media screen and (min-width: 320px) and (max-width: 527px){
+    header{
+        display: block;
+        width: 100%;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+    }
+    #logo{
+        width: 100%;
+        display: block;
+        position: relative;
+        margin: 0 auto !important;
+        text-align: center;
+    }
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    main{
+        width: 98%;
+        margin: 0 auto;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+    }
+    header #logo img{
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .container{
+        width: 85%;
+        max-width: 1000px;
+        margin: 0 auto;
+        display: block;
+    }
+    .user-details span.details {
+        font-size: 13px;
+    }
+
+    .user-details .input-box input{
+        font-size: 11px;
+    }
+
+    .user-details .input-box select{
+        font-size: 11px;
+    }
+
+    #myContainer form .user-details{
+        display: block !important;
+        position: relative;
+        margin: 0 auto;
+        flex-wrap: nowrap;
+        width: 100% !important;
+    }
+    .user-details .input-box input{
+        width: 100%;
+    }
+}
+
+/* Tablet */
+@media screen and (min-width: 527px) and (max-width: 768px){
+    header #logo img{
+        width: 70%;
+        height: auto;
+        margin: 0 auto;
+        text-align: center;
+    }
+    main{
+        width: 80%;
+        margin: 0 auto;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+    }
+    .user-details .input-box .details{
+        font-size: 10px;
+        text-align: left;
+    }
+    .user-details .input-box input{
+        font-size: 12px;
+    }
+    .user-details .input-box select{
+        font-size: 12px;
+    }
+}
+
+/* Estilos Ipad */
+@media screen and (min-width: 769px) and (max-width: 991px){
+    header #logo img{
+        width: 65%;
+        height: auto;
+        margin: 0 auto;
+        text-align: center;
+
+    }
+    main{
+        width: 80%;
+        margin: 0 auto;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+    }
+    .user-details .input-box .details{
+        font-size: 16px;
+        text-align: left;
+    }
+    .user-details .input-box select{
+        font-size: 16px;
+    }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1081px){
+    header #logo img{
+        width: 55%;
+        height: auto;
+        margin: 0 auto;
+        text-align: center;
+    }
+    main{
+        width: 80%;
+        margin: 0 auto;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+    }
+}
+
+@media screen and (min-width: 1082px) and (max-width: 1200px){
+    header #logo img{
+        width: 55%;
+        height: auto;
+        margin: 0 auto;
+        text-align: center;
+    }
+    main{
+        width: 65%;
+        margin: 0 auto;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+    }
+}
+
+@media screen and (min-width: 1201px) and (max-width: 1400px){
+    header #logo img{
+        width: 40%;
+        height: auto;
+        margin: 0 auto;
+        text-align: center;
+    }
+    main{
+        width: 70%;
+        margin: 0 auto;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+    }
+}
+
+@media screen and (min-width: 1401px) and (max-width: 1600px){
+    header #logo img{
+        width: 30%;
+        height: auto;
+        margin: 0 auto;
+        text-align: center;
+    }
+    main{
+        width: 80%;
+        max-width: 1400px;
+        margin: 0 auto;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+    }
+    .container{
+        width: 61%;
+        max-width: 1200px;
+    }
+}
+
+

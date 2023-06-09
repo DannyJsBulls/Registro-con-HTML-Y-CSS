@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar Cuenta</title>
+    <link rel="stylesheet" href="css/styleRegistrar.css">
+</head>
+<body>
+    <header>
+        <div id="logo">
+            <a href="index.html"><img src="img/positivo.png" alt="Logo"></a>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="title">Crear Cuenta</div>
+            <p>Complete los campos para registrarse en el sistema</p>
+            <form action="../../Controller/registrarUserExterno.php" method="POST">
+                <div class="user-details">
+                    <div class="input-box">
+                        <span class="details">Numero Identificacion:</span>
+                        <input type="number" name="numero_id" placeholder="Numero de Identificacion" required="">
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Tipo de Documento</span>
+                        <select name="tipo_documento" id="">
+                            <option>Seleccione una Opcion</option>
+                            <option value="CC">CC</option>
+                            <option value="CE">CE</option>
+                            <option value="PASAPORTE">PASAPORTE</option>
+                        </select>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Nombres:</span>
+                        <input type="text" name="nombres" placeholder="Ingrese sus nombres" required="">
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Apellidos:</span>
+                        <input type="text" name="apellidos" placeholder="Ingrese sus apellidos" required="">
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Fecha de Nacimiento:</span>
+                        <input type="date" name="fecha_nacimiento" placeholder="Ingrese su fecha de nacimiento" required="">
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Direccion Residencia:</span>
+                        <input type="text" name="direccion" placeholder="Ingrese su direccion" required="">
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Email:</span>
+                        <input type="email" name="email" placeholder="Ingrese su correo electronico" required="">
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Telefono:</span>
+                        <input type="number" name="telefono" placeholder="Ingrese su numero de telefono" required="">
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Genero</span>
+                        <select name="genero" id="">
+                            <option>Seleccione una Opcion</option>
+                            <option value="Masculino">MASCULINO</option>
+                            <option value="Femenino">FEMENINO</option>
+                        </select>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Contraseña:</span>
+                        <input type="password" name="clave" placeholder="Agregue una Contraseña">
+                    </div>
+                </div>
+                <div class="input-box">
+                    <span class="checkbox-select"></span>
+                    <input type="checkbox"> Acepto terminos y condiciones
+                </div>
+                <div class="button">
+                    <input type="submit" value="Registrarse">
+                </div>
+                <div class="login">
+                    <p>¿Ya tienes una cuenta? <a href="#" target="_blank"> Iniciar Sesion</a></p>
+                </div>
+            </form>
+        </div>
+    </main>     
+</body>
+</html>
